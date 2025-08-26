@@ -6,6 +6,7 @@ export interface resultModel{
 export interface filmModel{
     id:string,
     original_title:string,
+    title:string,
     overview: string,
     poster_path: string
 }
