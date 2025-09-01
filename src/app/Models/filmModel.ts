@@ -4,6 +4,7 @@ export interface resultModel{
 }
 
 export interface filmModel{
+showFull: any
     id:string,
     original_title:string,
     title:string,

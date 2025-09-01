@@ -1,13 +1,18 @@
+
 <h1>Les films à ne surtout pas manquer !</h1>
 
-    <div class="ffx">
+<div class="ffx">
+  @for (film of films(); track $index) {
+    <div class="film">
+      <div class="Titre">
+        <p>Titre: {{film.title}}</p>
+      </div>
 
-@for (film of films(); track $index){
- <div class="Titre"><p>Titre: {{film.title}} </p></div>
-    <div class="card">        
-        <p>Résumé: {{film.overview}} </p>
-        <img src="https://image.tmdb.org/t/p/w1280{{film.poster_path}}" alt="">
+      <div class="card">
+        <!-- <p>Résumé: {{film.overview.slice(0,15)}}...</p> -->
+        <div class="overflow">{{film.overview}}</div>
+        <img src="https://image.tmdb.org/t/p/w1280{{film.poster_path}}" alt="{{film.title}}">
+      </div>
     </div>
-   
-}
-    </div>
+  }
+</div>
