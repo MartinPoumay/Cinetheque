@@ -1,17 +1,20 @@
 
-<h1>Les séries à ne surtout pas manquer ! </h1>
+<h1>Toutes les séries </h1>
+<h2>Les plus populaire du moment : </h2>
 
 <div class="ffx">
   @for (serie of series(); track $index) {
-    <div class="film">
+    <div class="serie">
       <div class="Titre">
-        <p>Titre: {{serie.title}}</p>
+        <p>Titre: {{serie.name}}</p>
       </div>
 
       <div class="card">
         <div class="overflow">{{serie.overview}}</div>
-        <img src="https://image.tmdb.org/t/p/w1280{{serie.poster_path}}" alt="{{serie.title}}">
+        <img src="https://image.tmdb.org/t/p/w1280{{serie.poster_path}}" alt="{{serie.name}}">
       </div>
     </div>
   }
+
 </div>
+<h2>Les dernières sorties : </h2>

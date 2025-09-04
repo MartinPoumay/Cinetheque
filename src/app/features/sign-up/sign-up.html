@@ -1,1 +1,18 @@
-<p>Rejoins-nous !!</p>
+<h1> Formulaire d'inscription </h1>
+<div class="form-wrapper">
+    <form [formGroup] ="formGroup" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="firstname" class="form-label">Prénom</label>
+            <input id="firstname" type="text" formControlName="firstname" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="lastname" class="form-label">Nom</label>
+            <input id="lastname" type="text" formControlName="lastname" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input id="age" type="number" formControlName="age" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

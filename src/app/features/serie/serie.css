@@ -6,6 +6,13 @@ h1{
     border-radius: 10px;
 }
 
+h2{
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: wheat;
+  background-color: #0b0b0b;
+}
+
 .ffx {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -13,7 +20,7 @@ h1{
   padding: 1rem;
 }
 
-.film {
+.serie {
   display: flex;
   flex-direction: column;
   gap: .5rem;

@@ -1,13 +1,11 @@
-
 export interface resultModel{
-    results: filmModel[]
+    results: serieModel[]
 }
 
-export interface filmModel{
-name: any
+export interface serieModel{
 showFull: any
     id:string,
-    original_title:string,
+    original_name:string,
     title:string,
     overview: string,
     poster_path: string
