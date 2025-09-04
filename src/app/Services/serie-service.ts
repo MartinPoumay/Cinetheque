@@ -8,6 +8,6 @@ import { resultModel } from '../Models/filmModel';
 export class SerieService {
   private http=inject(HttpClient)  //service permettant de contacter l'API
   getAllSerie(){
-    return this.http.get<resultModel>("https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=1&api_key=c28dd4ecad7d3f735dfbb1892f0500bb")
+    return this.http.get<resultModel>("https://api.themoviedb.org/3/tv/popular?language=fr-FR&page=1&api_key=c28dd4ecad7d3f735dfbb1892f0500bb")
   }
 }
