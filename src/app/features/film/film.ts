@@ -16,7 +16,7 @@ export class Film implements OnInit {
     this.films.set(data.results)
   })
   }
- //   eppel de mon bouton dans le javascript 
+ //   appel de mon bouton dans le javascript 
 //  mybtn! : HTMLElement
 //   this.mybtn = document.getElementById("btn")
 //   (this.mybtn as HTMLElement)

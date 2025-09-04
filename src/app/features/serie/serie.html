@@ -1,1 +1,17 @@
-<p>Les meilleures séries sont ici</p>
+
+<h1>Les séries à ne surtout pas manquer ! </h1>
+
+<div class="ffx">
+  @for (serie of series(); track $index) {
+    <div class="film">
+      <div class="Titre">
+        <p>Titre: {{serie.title}}</p>
+      </div>
+
+      <div class="card">
+        <div class="overflow">{{serie.overview}}</div>
+        <img src="https://image.tmdb.org/t/p/w1280{{serie.poster_path}}" alt="{{serie.title}}">
+      </div>
+    </div>
+  }
+</div>
