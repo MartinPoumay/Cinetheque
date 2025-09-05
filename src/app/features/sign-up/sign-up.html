@@ -3,16 +3,20 @@
     <form [formGroup] ="formGroup" (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label for="firstname" class="form-label">Prénom</label>
-            <input id="firstname" type="text" formControlName="firstname" class="form-control">
+            <input id="firstname" type="text" formControlName="firstname" class="form-control" placeholder="ex: Jean">
         </div>
         <div class="mb-3">
             <label for="lastname" class="form-label">Nom</label>
-            <input id="lastname" type="text" formControlName="lastname" class="form-control">
+            <input id="lastname" type="text" formControlName="lastname" class="form-control" placeholder="ex: Neymar">
         </div>
         <div class="mb-3">
-            <label for="age" class="form-label">Age</label>
-            <input id="age" type="number" formControlName="age" class="form-control">
+            <label for="mail" class="form-label">E-mail</label>
+            <input id="mail" type="text" formControlName="mail" class="form-control" placeholder="ex: jean.neymar@dulundi.com">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input id="password" type="text" formControlName="password" class="form-control" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary">S'inscire</button>
     </form>
 </div>

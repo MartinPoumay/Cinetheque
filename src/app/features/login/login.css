@@ -1,0 +1,118 @@
+
+/* container du formulaire (carte) */
+form {
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, rgba(11,11,11,0.95), rgba(15,15,15,0.98));
+  border: 2px solid rgba(98, 60, 4, 0.12);
+  border-radius: calc(var(--radius) + 6px);
+  padding: 1.6rem;
+  box-sizing: border-box;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.form-wrapper {
+  min-height: 75vh;            /* occupe toute la hauteur */
+  display: flex;                /* active flexbox */
+  justify-content: center;      /* centre horizontalement */
+  align-items: center;          /* centre verticalement */
+  background: linear-gradient(160deg, #070707 0%, #121212 60%);
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  padding: 0.6rem 0.8rem;
+  background-color: var(--accent);
+  color: #FF9900;
+  border-radius: 8px;
+  border: 2px solid #000;
+  display: flex;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  justify-content: center;
+}
+
+/* layout interne — champ par bloc */
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* label */
+.form-label {
+  display: block;
+  font-weight: 700;
+  color: #FF9900;
+  margin-bottom: .45rem;
+  font-size: 0.95rem;
+}
+
+/* champs — prends en charge les deux noms de classe possibles */
+.form-control{
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  color: #FF9900;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: box-shadow .25s ease, border-color .2s ease, transform .12s ease;
+  outline: none;
+}
+
+/* bouton */
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+/* style principal du submit (s'accorde avec ton composant) */
+.btn-primary {
+  background: linear-gradient(180deg, #FF9900, #e07a00);
+  color: #0b0b0b;
+  box-shadow: 0 8px 22px rgba(255,153,0,0.14);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255,153,0,0.18);
+}
+
+
+/* responsive — sur large écran, deux colonnes pour certains champs */
+@media (min-width: 720px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    align-items: start;
+  }
+}
+
+
+/* micro interactions */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* dynamique : légère animation d'apparition pour le form */
+@keyframes floatIn {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+form { animation: floatIn .32s ease both; }

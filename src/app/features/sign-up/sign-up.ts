@@ -11,7 +11,9 @@ export class SignUp {
   formGroup = new FormGroup({
   firstname: new FormControl(''),
   lastname: new FormControl(''),
-  age : new FormControl(0),
+  mail : new FormControl(''),
+  password : new FormControl(''),
+
   });
 
   onSubmit() {
