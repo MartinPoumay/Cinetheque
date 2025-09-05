@@ -10,9 +10,7 @@
         <p>Titre: {{serie.name}}</p>
       </div>
 
-      <div class="card"
-        (click)="setActiveCard($index)" 
-        [style.z-index]="activeCardIndex === $index ? 10 : 1">
+      <div class="card">
         <div class="overflow">{{serie.overview}}</div>
         <div class="popularity">{{serie.popularity}} vues</div>
         <img src="https://image.tmdb.org/t/p/w1280{{serie.poster_path}}" alt="{{serie.name}}">

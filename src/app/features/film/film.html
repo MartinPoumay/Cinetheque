@@ -1,6 +1,7 @@
 
-<h1>Les films à ne surtout pas manquer !</h1>
+<h1>Tous les films </h1>
 
+<h2> Les films les plus populaire du moment : </h2>
 <div class="ffx">
   @for (film of films(); track $index) {
     <div class="film">
@@ -11,8 +12,28 @@
       <div class="card">
         <!-- <p>Résumé: {{film.overview.slice(0,15)}}...</p> -->
         <div class="overflow">{{film.overview}}</div>
+        <div class="vote_average">{{film.vote_average | number:'1.1-1'}}/10</div>
         <img src="https://image.tmdb.org/t/p/w1280{{film.poster_path}}" alt="{{film.title}}">
       </div>
     </div>
   }
 </div>
+
+<h2> Les prochaines sorties : </h2>
+<div class="ffx">
+  @for (newFilm of newFilms(); track $index) {
+    <div class="film">
+      <div class="Titre">
+        <p>Titre: {{newFilm.title}}</p>
+      </div>
+
+      <div class="card">
+        <div class="overflow">{{newFilm.overview}}</div>
+        <div class="release_date">Première diffusion le {{newFilm.release_date | date:'dd/MM/yyyy'}}</div>
+        <img src="https://image.tmdb.org/t/p/w1280{{newFilm.poster_path}}" alt="{{newFilm.title}}">
+      </div>
+    </div>
+  }
+</div>
+
+

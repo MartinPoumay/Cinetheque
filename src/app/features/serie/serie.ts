@@ -13,9 +13,6 @@ export class Serie implements OnInit {
   series=signal<serieModel[] | undefined> (undefined)
   seriesLatest=signal<serieModel[] | undefined> (undefined)
   seriesToday=signal<serieModel[] | undefined> (undefined)
-  activeCardIndex: number | null = null;
-    setActiveCard(index: number) {
-    this.activeCardIndex = index;}
 
   ngOnInit(): void {
       this.srvSerie.getAllSerie().subscribe((data)=>{

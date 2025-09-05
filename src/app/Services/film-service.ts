@@ -10,5 +10,8 @@ export class FilmService {
   getAllFilm(){
     return this.http.get<resultModel>("https://api.themoviedb.org/3/movie/popular?language=fr-FR&page=1&api_key=c28dd4ecad7d3f735dfbb1892f0500bb")
   }
+  getNewFilm(){
+    return this.http.get<resultModel>("https://api.themoviedb.org/3/movie/upcoming?language=fr-FR&page=1&api_key=c28dd4ecad7d3f735dfbb1892f0500bb")
+  }
 }
 

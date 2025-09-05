@@ -6,6 +6,13 @@ h1{
     border-radius: 10px;
 }
 
+h2{
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: wheat;
+  background-color: #0b0b0b;
+}
+
 .ffx {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -41,6 +48,12 @@ h1{
     .overflow{
         display: block;
     }
+    .release_date{
+      opacity: 0;
+    }
+    .vote_average{
+      opacity: 0;
+    }
   }
 }
 
@@ -54,6 +67,34 @@ h1{
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   color: #FF9900;
+}
+
+.release_date {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #FFD700;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
+}
+
+.vote_average {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #FFD700;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
 }
 
 img {

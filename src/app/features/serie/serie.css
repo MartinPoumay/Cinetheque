@@ -50,7 +50,7 @@ h2{
   font-weight: bold;
   font-size: 0.8rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
 .card {
@@ -61,11 +61,12 @@ h2{
   &:hover{
     .overflow{
         display: block;
-    }
-    transform: scale(1.05);
+      }
+    .popularity{
+      opacity: 0;
+      }
   }
   cursor: pointer;
-  transition: transform 0.3s ease, z-index 0s;
 }
 
 /* gère l'intérieur de la carte*/
