@@ -2,6 +2,8 @@ import { Component, NgModule, signal } from '@angular/core';
 import { Banner } from "./banner/banner";
 import { RouterOutlet } from '@angular/router';
 import { Main } from "./main/main";
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',

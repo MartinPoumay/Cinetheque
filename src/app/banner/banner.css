@@ -1,7 +1,7 @@
 .banner {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Écarte le titre et les boutons à droite */
+  justify-content: space-between;
   background-color: black;
   color: white;
   padding: 20px;
@@ -15,14 +15,21 @@
   font-size: 2em;
 }
 
+.brand {
+  color: #FF9900;
+  margin: 0;
+  font-size: 1em;
+}
+
 .buttons {
   display: flex;
   gap: 10px;
 }
 
+/* login et signUp */
 .auth-buttons {
   display: flex;
-  gap: 10px; /* espace entre Login et Sign Up */
+  gap: 10px;
 }
 
 .buttons button,

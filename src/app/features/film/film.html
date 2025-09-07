@@ -1,17 +1,22 @@
 
 <h1>Tous les films </h1>
+<div class="search">
+  <input type="text" placeholder="Rechercher un film..." [(ngModel)]="searchQuery">
+</div>
 
 <h2> Les films les plus populaire du moment : </h2>
 <div class="ffx">
-  @for (film of films(); track $index) {
+  @for (film of filteredFilms(); track $index) {
     <div class="film">
       <div class="Titre">
         <p>Titre: {{film.title}}</p>
       </div>
-
+<!-- gère la carte + l'overlay qui affiche le texte -->
       <div class="card">
-        <!-- <p>Résumé: {{film.overview.slice(0,15)}}...</p> -->
-        <div class="overflow">{{film.overview}}</div>
+        <div class="overflow">
+          <p class="overview">{{film.overview }}</p>
+          <p class="release_date"> Première diffusion : {{ film.release_date ? (film.release_date | date:'dd/MM/yyyy') : 'Date inconnue' }}</p>
+        </div>
         <div class="vote_average">{{film.vote_average | number:'1.1-1'}}/10</div>
         <img src="https://image.tmdb.org/t/p/w1280{{film.poster_path}}" alt="{{film.title}}">
       </div>
@@ -21,7 +26,7 @@
 
 <h2> Les prochaines sorties : </h2>
 <div class="ffx">
-  @for (newFilm of newFilms(); track $index) {
+  @for (newFilm of filteredNewFilms(); track $index) {
     <div class="film">
       <div class="Titre">
         <p>Titre: {{newFilm.title}}</p>

@@ -1,10 +1,13 @@
 
 <h1>Toutes les séries </h1>
+<div class="search">
+  <input type="text" placeholder="Rechercher une série..." [(ngModel)]="searchQuery">
+</div>
 
-<h2>Les plus populaire du moment : </h2>
+<h2>Les séries les plus vues : </h2>
 
 <div class="ffx">
-  @for (serie of series(); track $index) {
+  @for (serie of filteredSeries(); track $index) {
     <div class="serie">
       <div class="Titre">
         <p>Titre: {{serie.name}}</p>
@@ -22,7 +25,7 @@
 
 <h2>Les dernières sorties : </h2>
 <div class="ffx">
-  @for (serieLatest of seriesLatest(); track $index) {
+  @for (serieLatest of filteredSeriesLatest(); track $index) {
     <div class="serie">
       <div class="Titre">
         <p>Titre: {{serieLatest.name}}</p>
@@ -37,7 +40,7 @@
 
 <h2>Diffusé aujourd'hui : </h2>
 <div class="ffx">
-  @for (serieToday of seriesToday(); track $index) {
+  @for (serieToday of filteredSeriesToday(); track $index) {
     <div class="serie">
       <div class="Titre">
         <p>Titre: {{serieToday.name}}</p>
